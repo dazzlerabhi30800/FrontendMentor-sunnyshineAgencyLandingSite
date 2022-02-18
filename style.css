@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+}
+
+:root {
+    --Soft-red: hsl(7, 99%, 70%);
+ --Yellow: hsl(51, 100%, 49%);
+ --Dark-desaturated-cyan: hsl(167, 40%, 24%);
+ --Dark-blue: hsl(198, 62%, 26%);
+ --Dark-moderate-cyan: hsl(168, 34%, 41%);
+
+ --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+ --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+ --Dark-grayish-blue: hsl(232, 10%, 55%);
+ --Grayish-blue: hsl(210, 4%, 67%);
+ --White: hsl(0, 0%, 100%);
+
+ --Barlow : 'Barlow', sans-serif;
+ --Fraunces : 'Fraunces', sans-serif;
+}
+
+body {
+    height : 100vh;
+}
+
+.component  {
+    display : flex;
+    justify-content : space-between;
+    background : url('images/mobile/image-header.jpg') no-repeat;
+    /* background-size : 400px 500px; */
+    background-size : cover;
+    padding-right : .5rem;
+    padding-left : .5rem;
+    height : 35rem;
+    position : relative;
+    width : 100vw;
+}
+
+.logo {
+    font-family : var(--Fraunces);
+    color : white;
+}
+
+.navbar {
+    position : absolute;
+    display : flex;
+    background : white;
+    height : auto;
+    padding-top : 1rem;
+    padding-left : 1.5rem;
+    padding-right : 1.5rem;
+    width : 90%;
+    z-index : 44;
+    height : 70%;
+    /* border-radius : 5px; */
+    justify-content : center;
+    top : 18%;
+    left : 5%;
+    transform : translateY(-1000px);
+    transition : all .3s ease-in;
+
+}
+.navbar.active {
+    transform : translateY(0px);
+}
+.navbar::after {
+    position : absolute;
+    content : "";
+    /* background : red;
+    width : 4px;
+    height : 10px; */
+    border-bottom : 30px solid white;
+    border-left : 40px solid transparent;
+    top : -6%;
+    right : 0;
+    
+}
+
+.nav-list {
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    text-align : center;
+}
+.list-item {
+    display : flex;
+    list-style : none;
+    margin : 20px 0px;
+    align-self : center;
+}
+.list-link {
+    text-decoration : none;
+    color : rgb(92, 87, 87);
+    font-family: var(--Barlow);
+    font-size : 1.5rem;
+    cursor : pointer;
+    transition : all .3s ease-in-out;
+    position : relative;
+}
+
+.nav-list li:nth-child(1) a:after {
+    position : absolute;
+    content : "";
+    width : 0%;
+    height : 2px;
+    background : black;
+    bottom : 0;
+    left : 0;
+    transition : all .3s ease-in;
+}
+.nav-list li:nth-child(2) a:hover:after {
+    width : 100%
+}
+.nav-list li:nth-child(2) a:after {
+    position : absolute;
+    content : "";
+    width : 0%;
+    height : 2px;
+    background : black;
+    bottom : 0;
+    left : 0;
+    transition : all .3s ease-in;
+}
+.nav-list li:nth-child(1) a:hover:after {
+    width : 100%
+}
+.nav-list li:nth-child(3) a:after {
+    position : absolute;
+    content : "";
+    width : 0%;
+    height : 2px;
+    background : black;
+    bottom : 0;
+    left : 0;
+    transition : all .3s ease-in;
+}
+.nav-list li:nth-child(3) a:hover:after {
+    width : 100%
+}
+
+
+.list-link:hover {
+    color : black;
+}
+
+#contact {
+    background : var(--Yellow);
+    padding : .8rem 1rem .8rem 1rem;
+    border-radius : 30px;
+    text-align : center;
+    color : black;
+    transition : all .2s ease-in-out;
+}
+#contact:hover {
+    color : rgb(48, 45, 45);
+}
+
+
+.menu-btn {
+    position : fixed;
+    right : 20px;
+    top : 10px;
+    margin-right : .7rem;
+}
+.menu-btn {
+    color : white;
+    font-size : 1.3rem;
+    cursor : pointer;
+    transition : all .3s ease-in-out;
+}
+
+
+.headline-wrapper {
+    display : flex;
+    position : absolute;
+    top : 30%;
+    text-align : center;
+    align-self : center;
+    /* left : 20%; */
+    font-size : 1.8rem;
+    font-family : var(--Fraunces);
+    color : white;
+    justify-content : center;
+    width : 100%;
+}
+.headline {
+    text-align : center;
+    align-self : center;
+}
+
+/* Egg Section  */
+
+.egg {
+    display : flex;
+    flex-direction : column;
+}
+.img-wrapper {
+    background : url('images/mobile/image-transform.jpg') no-repeat;
+    background-size : cover;
+    width : 100vw;
+    height : 20rem;
+
+}
+.text-wrapper {
+    display : flex;
+    flex-direction : column;
+    padding-top : 3rem;
+    padding-right : 1rem;
+    padding-left : 1rem;
+    justify-content : center;
+    text-align : center;
+    padding-bottom : 3rem;
+    
+}
+.heading {
+    font-size : 2rem;
+    font-family : var(--Fraunces);
+}
+.description {
+    font-size : 1.3rem;
+    font-family : var(--Barlow);
+    margin-top : 1rem;
+    color : rgb(102, 98, 98);
+}
+.btn {
+    font-size : 1.4rem;
+    text-decoration : none;
+    margin-top : 1.4rem;
+    font-family : var(--Fraunces);
+    color : black;
+    position : relative;
+    display : flex;
+    justify-content : center;
+    /* background : #ccc; */
+    width : 45%;
+    align-self : center;
+}
+.btn::after {
+    position : absolute;
+    content : "";
+    width : 100%;
+    height : 8px;
+    background : rgba(255, 255, 0, 0.63);
+    border-radius : 20px;
+    bottom : 3px;
+    left : 0%;
+    z-index : -1;
+}
+
+
+/* Glass Section  */
+
+.glass {
+    display : flex;
+    flex-direction : column;
+}
+.glass-img {
+    background : url('images/mobile/image-stand-out.jpg') no-repeat;
+    background-size : cover;
+}
+
+.red::after {
+    background : rgba(255, 0, 0, 0.438);
+}
+
+/* Cherry Section  */
+.cherry {
+    background : url('images/mobile/image-graphic-design.jpg') no-repeat;
+    width : 100vw;
+    background-size : cover;
+    height : 32rem;
+    position : relative;
+    display : flex;
+    flex-direction : column;
+    text-align : center;
+    justify-content : center;
+    /* align-items : center; */
+    padding-right : 1rem;
+    padding-left : 1rem;
+}
+.information-wrapper {
+    display : flex;
+    flex-direction : column;
+    position : relative;
+    top : 10rem;
+    padding-bottom : 1.4rem;
+    /* background : rgba(255, 0, 0, 0.288); */
+}
+.information-wrapper h1 {
+    padding-bottom : 1rem;
+    font-size : 2rem;
+    font-family : var(--Fraunces);
+    color : var(--Dark-blue);
+}
+.information-wrapper p {
+    font-size : 1.1rem;
+    font-family : var(--Barlow);
+    color : var(--Dark-desaturated-cyan);
+}
+
+/* Orange Section  */
+.orange {
+    background : url('images/mobile/image-photography.jpg') no-repeat;
+    width : 100vw;
+    background-size : cover;
+    height : 32rem;
+    position : relative;
+    display : flex;
+    flex-direction : column;
+    text-align : center;
+    justify-content : center;
+    /* align-items : center; */
+    padding-right : 1rem;
+    padding-left : 1rem;
+}
+
+
+/* Testimonials section  */
+
+.testimonials {
+    display : flex;
+    justify-content : center;
+    flex-direction : column;
+    padding : 2rem 1.5rem 4rem 1.5rem;
+    align-items : center;
+}
+.testimonials-section {
+    display : flex;
+    flex-direction : column;
+}
+.top-heading {
+    font-family : var(--Fraunces);
+    font-size : 1rem;
+    letter-spacing : 3px;
+    color : var(--Dark-grayish-blue);
+}
+.profile-img {
+    display : flex;
+    justify-content : center;
+    position : relative;
+    border-radius : 50%;
+    align-items : center;
+    margin-top : 1.3rem;
+    position : relative;
+    cursor : pointer;
+}
+.profile-img img {
+    width : 70px;
+    height : 70px;
+    border-radius : 50%;
+    align-self : center;
+}
+
+
+
+
+.bio-wrapper {
+    margin-top : 1rem;
+    display : flex;
+    justify-content : center;
+    flex-direction : column;
+    text-align : center;
+}
+.bio {
+    font-size : 1rem;
+    color : var(--Very-dark-desaturated-blue);
+    font-family : var(--Barlow);
+}
+.name {
+    margin-top : .8rem;
+    font-family : var(--Barlow);
+    font-size : 1.2rem;
+}
+.job-title {
+    margin-top : .5rem;
+    font-family : var(--Barlow);
+    font-size : .7rem;
+    color : rgb(105, 102, 102);
+}
+
+.two {
+    padding-top: 3.5rem;
+}
+.three {
+    padding-top : 3.5rem;
+}
+
+
+/* Gallery Section  */
+
+.gallery {
+    display : grid;
+    grid-template-columns : repeat(2,1fr);
+    gap : 0rem;
+    height : 20rem;
+    background : #ccc;
+}
+.gallery-img {
+    position : relative;
+    width : 50vw;
+    height : 180px;
+}
+.gallery-img img {
+    position : absolute;
+    width : 100%;
+    height : 100%;
+    object-fit : fill; 
+}
+
+/* Footer Info  */
+
+.info {
+    padding-top : 4rem;
+    padding-bottom : 4rem;
+    padding-right : 1.5rem;
+    padding-left : 1.5rem;
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    text-align : center;
+    background : rgb(111, 236, 159);
+}
+.site-name {
+    font-size : 2.3rem;
+    color : var(--Dark-blue);
+    font-family : var(--Barlow);
+    font-weight : bolder;
+}
+.link-wrapper {
+    display : flex;
+    justify-content : center;
+    text-decoration : none;
+    margin-top : 1.5rem;
+}
+.link-wrapper a {
+    text-decoration : none;
+    margin : 0 15px;
+    font-family : var(--Barlow);
+    font-size : 1.2rem;
+    font-weight : lighter;
+    color : rgb(43, 107, 86);
+    cursor : pointer;
+    transition : all .3s ease-in;
+}
+.link-wrapper a:hover {
+    color : white;
+}
+.logo-wrapper {
+    display : flex;
+    justify-content : center;
+    margin-top : 4rem;
+}
+.logo-wrapper i {
+    margin : 0 15px;
+    color : var(--Dark-blue);
+    font-size : 1.2rem;
+    cursor : pointer;
+    transition : all .3s ease-in;
+}
+.logo-wrapper i:hover {
+    color : white;
+}
+
+@media (min-width : 500px) {
+    .component {
+       background-size : 100vw 400px;
+       height : 25rem;
+    }
+}
+
+@media (min-width : 800px) {
+    .component {
+        background : url('images/desktop/image-header.jpg') no-repeat;
+        background-size : 100% 500px;
+        height : 30rem;
+    }
+
+    .egg {
+        display : flex;
+        flex-direction : row-reverse;
+        
+    }
+    .egg-img {
+        width : 80rem;
+    }
+
+
+    .text-wrapper {
+        justify-content : flex-start;
+        align-self : flex-start;
+        text-align : left;
+        padding-right : 2rem;
+        padding-left : 3rem;
+    }
+    .heading {
+        font-size : 1.5rem;
+        color : rgb(66, 62, 62);
+    }
+    .description {
+        font-size : 1rem;
+    }
+    .btn {
+        align-self : flex-start;
+        font-size : 1.3rem;
+        margin-top : 4rem;
+    }
+
+    .glass {
+        display : flex;
+        flex-direction : row;
+    }
+
+    .fruits {
+        display : flex;
+        flex-direction : row;
+        width : 100vw;
+        background : black;
+    }
+    .cherry {
+        background : url('images/desktop/image-graphic-design.jpg') no-repeat;
+        background-position : center;
+        background-size : cover;
+        
+    }
+    .orange {
+        background : url('images/desktop/image-photography.jpg') no-repeat;
+        background-position : center;
+        background-size : cover;
+    }
+}
+
+
+@media (min-width : 1000px) {
+    .menu-btn {
+        visibility : hidden;
+    }
+    .navbar::after {
+        visibility : hidden;
+    }
+    .navbar {
+        position : relative;
+        display : flex;
+        width : auto;
+        height : 2.5rem;
+        top : 0;
+        left : initial;
+        /* background : #ccc; */
+        background : transparent;
+        padding-top : 0px;
+        padding-right : 0;
+        padding-left : 0;
+        justify-content : flex-start;
+        width : 60%;
+        margin-right : 3rem;
+        margin-top : 0px;
+        transform : translateY(0px);
+    }
+    .nav-list {
+        display : flex;
+        flex-direction : row;
+    }
+    .list-item {
+        margin : 0px 1rem;
+    }
+    .list-link {
+        font-size : 1rem;
+        color : white;
+    }
+    #contact {
+        background : transparent;
+        padding : 0 0 0 0;
+        border-radius : 0;
+        color : rgb(216, 208, 208);
+    }
+}
+
+@media (min-width : 1300px) {
+    .component {
+        background : url('images/desktop/image-header.jpg') no-repeat center;
+        background-size : cover;
+        height : 100vh;
+
+    }
+
+
+    .egg {
+        height : 30rem;
+    }
+    .img-wrapper {
+        height : 30rem;
+        width : 76rem;
+    }
+    .text-wrapper {
+        padding-top : 9rem;
+    }
+    .btn {
+        width : 28%;
+    }
+
+    .cherry {
+        background : url('images/desktop/image-graphic-design.jpg') no-repeat;
+        background-position : initial;
+        background-size : cover;
+        
+    }
+    .information-wrapper {
+        margin-top : 4rem;
+        padding-right : 5rem;
+        padding-left : 5rem;
+        padding-top : 2rem;
+    }
+    .information-wrapper h1{
+        font-size : 1.6rem;
+    }
+    .information-wrapper p {
+        font-size : 1rem;
+    }
+
+
+    .orange {
+        background : url('images/desktop/image-photography.jpg') no-repeat;
+        background-position : initial;
+        background-size : cover;
+    }
+
+
+    .testimonials {
+        /* background : black; */
+        padding : 0 0 0 0;
+    }
+    .top-heading {
+        margin-top : 2rem;
+    }
+    .testimonials-section {
+        display : flex;
+        flex-direction : row;
+        justify-content : center;
+        /* background : #ccc; */
+        margin-top : 3rem;
+        padding-bottom : 4rem;
+        padding-top : 2rem;
+        align-items : right;
+        padding-right : 7rem;
+        padding-left : 7rem;
+    }
+    .testimonials-grid {
+        margin : 0 3rem;
+    }
+    .one {
+        padding-top : 3.2rem;
+    }
+
+    .gallery {
+        grid-template-columns : repeat(4,1fr);
+        height : 15rem;
+    }
+    .gallery-img {
+        width : 25vw;
+        height : 250px;
+    }
+}
